@@ -1,84 +1,63 @@
 # Litestar Demo Project
 
-Это демонстрационный проект, созданный с использованием фреймворка Litestar. Проект представляет собой современное веб-приложение, построенное с учетом лучших практик разработки.
+[🇷🇺 Russian version](README.ru.md)
 
-## Особенности проекта
+This is a demo project built using the Litestar framework. The project represents a modern web application built with best development practices in mind.
 
-- 🚀 **Полная типизация** - проект полностью типизирован с использованием Python type hints
-- 🔄 **Асинхронная архитектура** - построен на асинхронном подходе для максимальной производительности
-- 🧅 **Луковая архитектура** - структура проекта следует принципам чистой архитектуры
-- 🛠 **Инструменты разработки**:
-  - Ruff для линтинга и форматирования кода
-  - mypy для статической типизации
-- 🐳 **Docker** - контейнеризация приложения для простого развертывания
+## Project Features
 
-## Структура проекта
+- 🚀 **Full Type Safety** - The project is fully typed using Python type hints
+- 🔄 **Async Architecture** - Built on an asynchronous approach for maximum performance
+- 🧅 **Onion Architecture** - Project structure follows clean architecture principles
+- 🛠 **Development Tools**:
+  - Ruff for code linting and formatting
+  - mypy for static type checking
+- 🐳 **Docker** - Application containerization for easy deployment
+
+## Project Structure
 
 ```
 .
-├── src/       # Исходный код приложения
-│   ├── apps/             # Модули приложения
-│   │   └── users/        # Модуль пользователей
-│   │       ├── api/      # API слой
-│   │       │   ├── controllers/  # Контроллеры API
-│   │       │   └── router.py     # Маршрутизация API
-│   │       ├── core/     # Бизнес-логика
-│   │       │   ├── models/       # Бизнес-модели
-│   │       │   ├── repositories/ # Интерфейсы репозиториев
-│   │       │   └── services/     # Бизнес-сервисы
-│   │       └── db/       # Работа с базой данных
-│   │           ├── models.py     # Модели БД
-│   │           └── repository.py # Реализация репозиториев
-│   ├── db/               # Конфиг базы данных
-│   │   ├── base_model.py # Базовый класс моделей
-│   │   ├── models.py     # Общие модели БД
-│   │   └── setup.py      # Настройка подключения к БД
-│   ├── app.py            # Основной файл приложения
-│   ├── settings.py       # Конфиг приложения
-│   ├── requirements.txt  # Зависимости проекта
-│   ├── pyproject.toml    # Конфиг проекта
-│   ├── ruff.toml         # Конфиг Ruff
-│   └── mypy.ini          # Конфиг mypy
-└── dev/                  # Файлы для разработки
-    ├── .env             # Переменные окружения
-    ├── .env.example     # Пример переменных окружения
-    ├── Dockerfile       # Конфигурация Docker
-    └── docker-compose.yml # Конфигурация Docker Compose
+├── src/       # Application source code
+│   ├── apps/             # Application modules
+│   │   └── users/        # Users module
+│   │       ├── api/      # API layer
+│   │       │   ├── controllers/  # API controllers
+│   │       │   └── router.py     # API routing
+│   │       ├── core/     # Business logic
+│   │       │   ├── models/       # Business models
+│   │       │   ├── repositories/ # Repository interfaces
+│   │       │   └── services/     # Business services
+│   │       └── db/       # Database operations
+│   │           ├── models.py     # DB models
+│   │           └── repository.py # Repository implementations
+│   ├── db/               # Database configuration
+│   │   ├── base_model.py # Base model class
+│   │   ├── models.py     # Common DB models
+│   │   └── setup.py      # DB connection setup
+│   ├── app.py            # Main application file
+│   ├── settings.py       # Application configuration
+│   ├── requirements.txt  # Project dependencies
+│   ├── pyproject.toml    # Project configuration
+│   ├── ruff.toml         # Ruff configuration
+│   └── mypy.ini          # mypy configuration
+└── dev/                  # Development files
+    ├── .env             # Environment variables
+    ├── .env.example     # Environment variables example
+    ├── Dockerfile       # Docker configuration
+    └── docker-compose.yml # Docker Compose configuration
 ```
 
-## Установка и запуск
+## Installation and Running
 
-### С использованием Docker (рекомендуется)
+### Using Docker
 
-1. Скопируйте файл с переменными окружения:
+1. Copy the environment variables file:
 ```bash
 cp dev/env.example .env
 ```
 
-2. Запустите приложение:
+2. Run the application:
 ```bash
 docker compose up --build
 ```
-
-### Локальная установка
-
-1. Создайте виртуальное окружение:
-```bash
-python -m venv .venv
-source .venv/bin/activate  # для Linux/Mac
-.venv\Scripts\activate     # для Windows
-```
-
-2. Установите зависимости:
-```bash
-pip install -r requirements.txt
-```
-
-3. Запустите приложение:
-```bash
-uvicorn src.app:app --reload
-```
-
-## Лицензия
-
-MIT
