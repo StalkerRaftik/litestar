@@ -1,0 +1,25 @@
+[project]
+name = "litestar-demo"
+version = "0.1.0"
+description = ""
+authors = [{ name = "Ivan Smirnov", email = "whiletruedoend@ya.ru" }]
+readme = "README.md"
+requires-python = ">=3.12,<4.0"
+dependencies = [
+    "python-dotenv>=1.0.0,<2.0.0",
+    "litestar[standard]>=2.0.0,<3.0.0",
+    "litestar-granian>=0.0.0,<1.0.0",
+    "litestar-asyncpg>=0.0.0,<1.0.0",
+    "advanced-alchemy>=0.20.0,<0.21.0",
+    "msgspec>=0.18.6,<0.19.0",
+    "mypy>=1.15.0,<2.0.0",
+    "ruff>=0.11.5,<1.0.0",
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+package-mode = false

@@ -1,0 +1,18 @@
+services:
+  postgres:
+    image: postgres:13.0-alpine
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+    env_file: .env
+  backend:
+    build:
+      context: ../src
+      dockerfile: ../dev/Dockerfile
+    depends_on:
+      - postgres
+    volumes:
+      - ../src:/src
+    command: litestar run -r --port 8001 --host 0.0.0.0
+    env_file: .env
+    ports:
+      - "8001:8001"

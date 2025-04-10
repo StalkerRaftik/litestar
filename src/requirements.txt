@@ -1,0 +1,9 @@
+# FOR LOCAL DEVELOPMENT
+# I DONT WANT TO INSTALL C++ BUILD TOOLS (6GB) FOR MSGSPEC!
+python-dotenv>=1.0.0,<2.0.0
+litestar[standard]>=2.0.0,<3.0.0
+litestar-granian>=0.0.0,<1.0.0
+litestar-asyncpg>=0.0.0,<1.0.0
+advanced-alchemy>=0.20.0,<0.21.0
+mypy>=1.15.0,<2.0.0
+ruff>=0.11.5,<1.0.0
