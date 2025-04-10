@@ -54,7 +54,7 @@ This is a demo project built using the Litestar framework. The project represent
 
 1. Copy the environment variables file:
 ```bash
-cp dev/env.example .env
+cp ./.env.example ./.env
 ```
 
 2. Run the application:
